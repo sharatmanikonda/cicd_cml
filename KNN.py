@@ -8,8 +8,8 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 import pickle
 
 # Load the dataset
-file_path = r"D:\Instilit\2025\Coporate Requirements\Minfy\Git Actions\Chronic_Kidney_Disease_data.csv"
-data = pd.read_csv(file_path)
+# file_path = r"Chronic_Kidney_Disease_data.csv"
+data = pd.read_csv(r"Chronic_Kidney_Disease_data.csv")
 
 # Drop non-predictive columns
 data = data.drop(columns=["PatientID", "DoctorInCharge"], axis=1)
@@ -109,3 +109,4 @@ with open('kNN_model.pkl', 'wb') as f:
 
 with open('scaler.pkl', 'wb') as f:
     pickle.dump(scaler, f)
+
